@@ -49,13 +49,19 @@ function Report({initialStates = {}, isReport, ...props}) {
       <Header>{t("ES_COMMON_REPORT")}</Header>
 
       <SearchReport
-      t={t} 
+      t={t} yarn
       // moduleCode = "TL"
       language={language}
       tenantId={tenantId} 
       // onSearch={handleFilterChange} 
       {...props} 
       />
+
+
+
+
+
+
 
     </div>
   )

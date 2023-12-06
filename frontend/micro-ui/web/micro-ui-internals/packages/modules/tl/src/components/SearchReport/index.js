@@ -14,14 +14,14 @@ function SearchReport({ tenantId, t, moduleCode, language,  onSearch, ...props }
   let moduleName = "TL"
   let reportName = "TL"
   const filter = [
-    {
-    "name": "fromDate",
-    "input": fromDate
-    },
-    {
-      "name": "toDate",
-      "input": toDate
-    }
+    // {
+    // "name": "fromDate",
+    // "input": fromDate
+    // },
+    // {
+    //   "name": "toDate",
+    //   "input": toDate
+    // }
   ]
 
   // const { moduleName, reportName } = useParams();

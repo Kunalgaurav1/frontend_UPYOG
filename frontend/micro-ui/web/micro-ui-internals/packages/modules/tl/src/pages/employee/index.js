@@ -108,6 +108,9 @@ const TLBreadCrumb = ({ location }) => {
       breadCrumbUrls.includes("home/license") || 
       breadCrumbUrls.includes("inbox/license")
     },
+
+
+
     {
       path: "/digit-ui/employee/tl/report",
       content: t("ES_TITLE_REPORT"), // created for report component
@@ -173,6 +176,7 @@ const EmployeeApp = ({ path, url, userType }) => {
   const ReNewApplication = Digit?.ComponentRegistryService?.getComponent('TLReNewApplication');
   const Response = Digit?.ComponentRegistryService?.getComponent('TLResponse');
   const Search = Digit?.ComponentRegistryService?.getComponent('TLSearch');
+  // ye v report ka hai 
   const Report = Digit?.ComponentRegistryService?.getComponent('Report')
 
   return (
@@ -202,6 +206,7 @@ const EmployeeApp = ({ path, url, userType }) => {
           </p> */}
           <PrivateRoute
             path={`${path}/inbox`}
+            
             component={() => (
               <Inbox parentRoute={path} businessService="TL" filterComponent="TL_INBOX_FILTER" initialStates={{}} isInbox={true} />
             )}
@@ -213,9 +218,13 @@ const EmployeeApp = ({ path, url, userType }) => {
           <PrivateRoute path={`${path}/response`} component={(props) => <Response {...props} parentRoute={path} />} />
           <PrivateRoute path={`${path}/search/:variant`} component={(props) => <Search {...props} parentRoute={path} />} />
 
-          <PrivateRoute path={`${path}/report`} component={(props) => <Report {...props} isReport={true} parentRoute={path} />} />
+
+        {/* ye react ka component leke aayega  */}
+          {/*   {`${path}/report`} component={(props) => <Report {...props} isReport={true} parentRoute={path} />} /> */}
+         
           
         </div>
+        
       </React.Fragment>
     </Switch>
   );
